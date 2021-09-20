@@ -12,11 +12,7 @@ class NewsService {
 
     var response = await http.get(Uri.parse(url));
 
-    print(response.body);
-
     if (response.statusCode == 200) {
-      print('We are here!');
-
       try {
         topArticles = TopArticles.fromRawJson(response.body);
 
