@@ -17,15 +17,13 @@ class NewsService {
     if (response.statusCode == 200) {
       print('We are here!');
 
-      //try {
-      topArticles = TopArticles.fromRawJson(response.body);
+      try {
+        topArticles = TopArticles.fromRawJson(response.body);
 
-      print("HERE@");
-      print('Length:' + topArticles.articles.length.toString());
-      return topArticles;
-      // } catch (ex, stacktrace) {
-      //   print(ex.toString() + stacktrace.toString());
-      // }
+        return topArticles;
+      } catch (ex, stacktrace) {
+        print(ex.toString() + stacktrace.toString());
+      }
     }
   }
 }

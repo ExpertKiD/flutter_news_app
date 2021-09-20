@@ -17,7 +17,7 @@ class Article {
   final Source source;
   final String? author;
   final String title;
-  final String description;
+  final String? description;
   final String url;
   final String? urlToImage;
   final DateTime publishedAt;
